@@ -1,0 +1,216 @@
+/* ====== avatar.css ====== */  
+
+.avatar-grid {  
+    display: grid;  
+    grid-template-columns: repeat(4, 1fr);  
+    gap: 20px;  
+    padding: 20px 0;  
+}  
+
+.avatar-card {  
+    background: linear-gradient(145deg, #1a1a2e, #16213e);  
+    border-radius: 15px;  
+    overflow: hidden;  
+    transition: all 0.3s;  
+    border: 2px solid rgba(233,69,96,0.2);  
+}  
+
+.avatar-card:hover {  
+    transform: translateY(-10px);  
+    box-shadow: 0 20px 40px rgba(233,69,96,0.3);  
+    border-color: #e94560;  
+}  
+
+.avatar-frame {  
+    padding: 20px;  
+    text-align: center;  
+    background: rgba(0,0,0,0.3);  
+}  
+
+.avatar-container {  
+    width: 120px;  
+    height: 120px;  
+    margin: 0 auto;  
+    border-radius: 50%;  
+    border: 4px solid #e94560;  
+    overflow: hidden;  
+    box-shadow: 0 0 30px rgba(233,69,96,0.3);  
+    transition: all 0.3s;  
+}  
+
+.avatar-card:hover .avatar-container {  
+    transform: scale(1.1);  
+    box-shadow: 0 0 50px rgba(233,69,96,0.5);  
+}  
+
+.avatar-gif {  
+    width: 100%;  
+    height: 100%;  
+    object-fit: cover;  
+}  
+
+.avatar-info {  
+    padding: 15px;  
+    text-align: center;  
+}  
+
+.avatar-name {  
+    color: #e94560;  
+    font-size: 16px;  
+    margin-bottom: 10px;  
+}  
+
+.avatar-details {  
+    display: flex;  
+    justify-content: space-between;  
+    margin-bottom: 10px;  
+    padding: 10px 0;  
+    border-top: 1px solid rgba(255,255,255,0.1);  
+    border-bottom: 1px solid rgba(255,255,255,0.1);  
+}  
+
+.avatar-model {  
+    color: #ffd700;  
+    font-size: 13px;  
+}  
+
+.avatar-price {  
+    color: #00ff88;  
+    font-size: 14px;  
+    font-weight: bold;  
+}  
+
+.avatar-frames {  
+    color: #888;  
+    font-size: 12px;  
+    margin-bottom: 10px;  
+}  
+
+.avatar-actions {  
+    display: flex;  
+    gap: 10px;  
+}  
+
+.btn-preview {  
+    flex: 1;  
+    padding: 8px;  
+    border: 1px solid #e94560;  
+    background: transparent;  
+    color: #e94560;  
+    border-radius: 8px;  
+    cursor: pointer;  
+    transition: all 0.3s;  
+    font-size: 13px;  
+}  
+
+.btn-preview:hover {  
+    background: #e94560;  
+    color: white;  
+}  
+
+.btn-download {  
+    flex: 1;  
+    padding: 8px;  
+    border: none;  
+    background: linear-gradient(135deg, #e94560, #ff6b81);  
+    color: white;  
+    border-radius: 8px;  
+    cursor: pointer;  
+    transition: all 0.3s;  
+    font-size: 13px;  
+}  
+
+.btn-download:hover {  
+    transform: scale(1.05);  
+}  
+
+/* ====== MODAL ====== */
+.modal {
+    display: none; /* Changed to flex via JS */
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.95);
+    animation: fadeIn 0.3s;
+    /* Flexbox centering */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 90vw;
+    max-height: 90vh;
+    transform-origin: center center;
+}
+
+.modal-content img {
+    max-width: 100%;
+    max-height: 90vh;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 50px rgba(233,69,96,0.3);
+    object-fit: contain;
+    transform-origin: center center;
+    margin: auto;
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: #e94560;
+    font-size: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 10000;
+}
+
+.close-modal:hover {
+    color: white;
+    transform: rotate(90deg);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* استجابة للأجهزة المختلفة */
+@media (max-width: 992px) {
+    .avatar-grid {
+        grid-template-columns: repeat(2, 1fr);  /* ✅ صفين بدلاً من 4 */
+    }
+    
+    .avatar-container {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 576px) {
+    .avatar-grid {
+        grid-template-columns: 1fr;  /* ✅ عمود واحد للجوال */
+    }
+    
+    .avatar-container {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .avatar-name {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 400px) {
+    .avatar-actions {
+        flex-direction: column;  /* ✅ الأزرار فوق بعض للشاشات الصغيرة */
+    }
+}

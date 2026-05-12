@@ -1,0 +1,59 @@
+<!DOCTYPE html>  
+<html lang="ar" dir="rtl">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Avatar 4D/3D - أفاتار متحرك</title>  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">  
+    <link rel="stylesheet" href="../css/style.css">  
+    <link rel="stylesheet" href="../css/avatar.css">  
+    <script src="../js/data.js"></script>
+</head>  
+<body>  
+
+    <!-- Banner -->  
+    <div style="background: linear-gradient(135deg, #0f0c29, #e94560, #302b63); padding: 40px; text-align: center;">  
+        <h1 style="color: white; font-size: 48px; text-shadow: 0 0 30px rgba(233,69,96,0.8);">  
+            <i class="fas fa-robot"></i> Avatar 4D/3D  
+        </h1>  
+        <p style="color: #ddd; font-size: 18px;">أفاتار متحرك 80×80 - 60 فريم - تصميم احترافي</p>  
+        <p style="color: #ffd700; margin-top: 10px;">  
+            <i class="fas fa-cube"></i> تصاميم فريدة  
+        </p>  
+    </div>  
+
+    <!-- Navigation -->  
+    <nav class="main-nav" style="background: #16213e; padding: 15px 0;">  
+        <div id="dynamic-nav-container" class="nav-container" style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: center; flex-wrap: wrap; gap: 10px;">
+        </div>  
+    </nav>  
+
+    <!-- ====== AVATAR GALLERY ====== -->  
+    <main style="padding: 40px 20px; max-width: 1200px; margin: 0 auto;">  
+
+        <div class="section-header" style="text-align: center; margin-bottom: 40px;">  
+            <h2 style="color: #e94560; font-size: 32px;">  
+                <i class="fas fa-crown"></i> أشهر التصاميم  
+            </h2>  
+            <p style="color: #888;">اختر أفاتارك المفضل من مجموعتنا الحصرية</p>  
+        </div>  
+
+        <!-- ====== GRID 4 أعمدة ====== -->  
+        <div class="avatar-grid gallery-grid" id="galleryGrid" data-category="avatars">  
+        </div>  
+    </main>  
+
+    <!-- ====== MODAL ZOOM ====== -->
+    <div id="zoomModal" class="modal">
+        <span class="close-modal" onclick="closeZoom()">&times;</span>
+        <div class="modal-content">
+            <img id="zoomImage" src="" alt="Zoom" style="max-width: 200px; border-radius: 50%; border: 5px solid #e94560; box-shadow: 0 0 50px rgba(233,69,96,0.5);">
+        </div>
+    </div>
+
+    <script src="../js/app.js"></script>  
+    <script src="../js/zoom.js"></script>  
+    <script src="../js/media.js"></script>  
+    <script src="../js/gallery.js"></script>  
+</body>  
+</html>

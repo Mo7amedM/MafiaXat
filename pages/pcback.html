@@ -1,0 +1,56 @@
+<!-- pages/pcback.html -->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Back - خلفيات غير متحركة</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/gallery.css">
+    <script src="../js/data.js"></script>
+</head>
+<body>
+
+    <!-- Banner صغير -->
+    <div style="
+        background: linear-gradient(135deg, #0f0c29, #302b63);
+        padding: 30px; text-align: center;
+    ">
+        <h1 style="color: white; font-size: 42px;">
+            <i class="fas fa-desktop" style="color: #e94560;"></i> 
+            PC Back
+        </h1>
+        <p style="color: #888; font-size: 18px;">خلفيات غير متحركة للحاسوب</p>
+    </div>
+
+    <!-- نفس شريط التنقل -->
+    <nav class="main-nav" style="background: #16213e; padding: 15px 0;">
+        <div id="dynamic-nav-container" class="nav-container" style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: center; flex-wrap: wrap; gap: 10px;">
+        </div>
+    </nav>
+
+    <!-- ====== GALLERY GRID ====== -->
+    <main style="padding: 40px 20px; max-width: 1200px; margin: 0 auto;">
+
+        <!-- شبكة 4 صور في كل صف -->
+        <!-- شبكة 4 صور في كل صف يتم توليدها ديناميكياً عبر gallery.js -->
+        <div class="gallery-grid" id="galleryGrid" data-category="pcback">
+        </div>
+
+    </main>
+
+    <!-- ====== MODAL ZOOM ====== -->
+    <div id="zoomModal" class="modal">
+        <span class="close-modal" onclick="closeZoom()">&times;</span>
+        <div class="modal-content">
+            <img id="zoomImage" src="" alt="Zoom">
+        </div>
+    </div>
+
+    <script src="../js/app.js"></script>
+    <script src="../js/zoom.js"></script>
+    <script src="../js/media.js"></script>
+    <script src="../js/gallery.js"></script>
+</body>
+</html>

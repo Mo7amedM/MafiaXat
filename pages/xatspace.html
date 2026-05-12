@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XatSpace - بروفايل متحرك</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/gallery.css">
+    <script src="../js/data.js"></script>
+</head>
+
+<body>
+
+    <!-- Banner -->
+    <div style="background: linear-gradient(135deg, #0f0c29, #00bcd4, #302b63); padding: 40px; text-align: center;">
+        <h1 style="color: white; font-size: 48px; text-shadow: 0 0 30px rgba(0,188,212,0.8);">
+            <i class="fas fa-user-astronaut"></i> XatSpace Profile
+        </h1>
+        <p style="color: #ddd; font-size: 18px;">بروفايل متحرك 1200×1920 - تصميمات حصرية</p>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="main-nav" style="background: #16213e; padding: 15px 0;">
+        <div id="dynamic-nav-container" class="nav-container"
+            style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: center; flex-wrap: wrap; gap: 10px;">
+        </div>
+    </nav>
+
+    <!-- ====== MAIN CONTENT ====== -->
+    <main style="padding: 40px 20px; max-width: 1200px; margin: 0 auto;">
+
+        <!-- ====== GRID ====== -->
+        <div class="gallery-grid" id="galleryGrid" data-category="xatspace">
+        </div> <!-- نهاية gallery-grid -->
+    </main>
+
+    <!-- ====== MODAL ZOOM ====== -->
+    <div id="zoomModal" class="modal">
+        <span class="close-modal" onclick="closeZoom()">&times;</span>
+        <div class="modal-content">
+            <img id="zoomImage" src="" alt="Zoom">
+        </div>
+    </div>
+
+    <script src="../js/app.js"></script>
+    <script src="../js/zoom.js"></script>
+    <script src="../js/media.js"></script>
+    <script src="../js/gallery.js"></script>
+</body>
+
+</html>
